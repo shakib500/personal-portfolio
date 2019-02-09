@@ -8,11 +8,13 @@ def home(request):
         email = request.POST.get("email")
         subject = request.POST.get("subject")
         message = request.POST.get("message")
+        print(name)
 
-        contact = contact()
-        contact.name = name
-        contact.email = email
-        contact.message = message
-        contact.save()
+        contact_details = contact()
+        contact_details.name = name
+        contact_details.email = email
+        contact_details.subject = subject
+        contact_details.message = message
+        contact_details.save()
 
     return render(request,'home.html')
