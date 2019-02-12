@@ -10,8 +10,6 @@ def home(request):
         subject = request.POST.get("subject")
         message = request.POST.get("message")
 
-        print(name,email,subject,message)
-
         contact_details = contact()
         contact_details.name = name
         contact_details.email = email
