@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import contact
+
 
 def home(request):
     if request.method == 'POST':
@@ -8,7 +9,8 @@ def home(request):
         email = request.POST.get("email")
         subject = request.POST.get("subject")
         message = request.POST.get("message")
-        print(name)
+
+        print(name,email,subject,message)
 
         contact_details = contact()
         contact_details.name = name
@@ -16,5 +18,6 @@ def home(request):
         contact_details.subject = subject
         contact_details.message = message
         contact_details.save()
+      # return redirect
 
     return render(request,'home.html')
