@@ -26,7 +26,7 @@ SECRET_KEY = 'kh7#*qc=8&mnwefzxlb4+ejo+3cgg_iodbpddi-cl=d@pj*!tu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kingdomofnoway.herokuapp.com','www.kingdomofnoway.ga']
 
 
 # Application definition
